@@ -64,12 +64,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MapPage(title: 'Map'),
+                          builder: (context) => const MapPage(title: 'Map'),
                         ),
                       );
                     },
                     child: Container(
-                      margin: const EdgeInsets.all(8.0),
+                      margin: const EdgeInsets.all(32.0),
                       width: 80, // Fixed width
                       height: 80, // Fixed height
                       decoration: BoxDecoration(
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       );
                     },
                     child: Container(
-                      margin: const EdgeInsets.all(8.0),
+                      margin: const EdgeInsets.all(32.0),
                       width: 80, // Fixed width
                       height: 80, // Fixed height
                       decoration: BoxDecoration(
@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       );
                     },
                     child: Container(
-                      margin: const EdgeInsets.all(8.0),
+                      margin: const EdgeInsets.all(32.0),
                       width: 80, // Fixed width
                       height: 80, // Fixed height
                       decoration: BoxDecoration(
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       );
                     },
                     child: Container(
-                      margin: const EdgeInsets.all(8.0),
+                      margin: const EdgeInsets.all(32.0),
                       width: 80, // Fixed width
                       height: 80, // Fixed height
                       decoration: BoxDecoration(

@@ -22,9 +22,11 @@ class _RacersPageState extends State<RacersPage> {
         crossAxisCount: 2,
         children: const [
           GridProfileItem(0, "Dave John"),
-          GridProfileItem(1, "Dave John"),
-          GridProfileItem(2, "Dave John"),
-          GridProfileItem(3, "Dave John"),
+          GridProfileItem(1, "Maria Joseph"),
+          GridProfileItem(2, "Leith Dale"),
+          GridProfileItem(3, "Alex Finn"),
+          GridProfileItem(4, "Dave Thudd"),
+          GridProfileItem(5, "John Ston"),
         ],
       ),
     );
@@ -51,29 +53,35 @@ class GridProfileItem extends StatelessWidget {
           ),
         );
       },
-      child: Container(
-        margin: const EdgeInsets.all(16.0),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8.0),
-          image: const DecorationImage(
-            image: AssetImage('assets/images/image4_11136.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              name,
-              style: const TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
+      child: Column(
+        children: [
+          Container(
+            width: 120,
+            height: 120,
+            margin: const EdgeInsets.all(8.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0),
+              image: const DecorationImage(
+                image: AssetImage('assets/images/image4_11136.png'),
+                fit: BoxFit.cover,
               ),
             ),
-          ],
-        ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                name,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }

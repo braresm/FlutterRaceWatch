@@ -17,60 +17,23 @@ class _MapPageState extends State<MapPage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Container(
-        color: Colors.white,
-        child: Container(
-          width: 390,
-          height: 844,
-          decoration: const BoxDecoration(
-            color: Color(0xff009add),
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/images/imageRectangle_511.png',
+            fit: BoxFit.cover,
           ),
-          child: Stack(
-            children: [
-              Positioned(
-                left: 0,
-                width: 390,
-                top: 0,
-                height: 844,
-                child: Image.asset(
-                  'images/imageRectangle_511.png',
-                  width: 390,
-                  height: 844,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Positioned(
-                left: 79,
-                width: 311,
-                top: 58,
-                height: 276,
-                child: Image.asset(
-                  'images/imageLeaderboard_510.png',
-                  width: 311,
-                  height: 276,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              const Positioned(
-                left: 20,
-                width: 21,
-                top: 18,
-                height: 28,
-                child: Text(
-                  'X',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                      decoration: TextDecoration.none,
-                      fontSize: 36,
-                      color: Color(0xff000000),
-                      fontWeight: FontWeight.normal),
-                  maxLines: 9999,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-            ],
+          Positioned(
+            top: 20,
+            right: 0,
+            child: Image.asset(
+              'assets/images/imageLeaderboard_510.png',
+              width: 300,
+              height: 200,
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
